@@ -9,7 +9,7 @@ name = []
 address = []
 type_ = []
 
-gmaps = googlemaps.Client(key = 'AIzaSyAdZKjevohQs7fHJn3NpZJ70DDtcAsj4rI')
+gmaps = googlemaps.Client(key = '')
 
 for geo in geo_tags:
     try:
