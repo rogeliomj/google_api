@@ -3,13 +3,13 @@ import pandas as pd
 import numpy as np
 import json
 
-dir = '/Users/rogeliomj/Documents/python/tesis/plataforma_cdmx/inmuebles_danados.csv'
+dir = ''
 df = pd.read_csv(dir)
 direcciones = df.iloc[:,5].tolist()
 
 # Nos conectamos al API de Google Maps
 
-gmaps_key = googlemaps.Client(key = 'AIzaSyAdZKjevohQs7fHJn3NpZJ70DDtcAsj4rI')
+gmaps_key = googlemaps.Client(key = '')
 lat = []
 lng = []
 for i in direcciones:
@@ -33,4 +33,4 @@ join = pd.merge(df, df_coordenadas, how = 'right', on = 'i1')
 
 del join['i1']
 
-join.to_csv('/Users/rogeliomj/Documents/python/tesis/plataforma_cdmx/escuelas_danadas_geocoded.csv', index = False)
+join.to_csv('', index = False)
