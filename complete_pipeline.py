@@ -2,14 +2,13 @@ import googlemaps
 import pandas as pd
 import numpy as np
 
-df1 = pd.read_csv('condesa.csv', encoding = 'utf-16', index_col = 'Unnamed: 0')
-df1.reset_index(inplace=True)
-del df1['index']
+df1 = pd.read_csv('', encoding = 'utf-16', index_col = 'Unnamed: 0')
+
 direcciones = df1.iloc[:, 1].tolist()
 
 # Nos conectamos al API de Google Maps
 
-gmaps_key = googlemaps.Client(key = 'AIzaSyAdZKjevohQs7fHJn3NpZJ70DDtcAsj4rI')
+gmaps_key = googlemaps.Client(key = '')
 geo_tags = []
 for i in direcciones[0:5]:
     try:
@@ -38,7 +37,7 @@ name = []
 address = []
 type_ = []
 
-gmaps = googlemaps.Client(key = 'AIzaSyAdZKjevohQs7fHJn3NpZJ70DDtcAsj4rI')
+gmaps = googlemaps.Client(key = '')
 
 for geo in geo_tags:
     try:
@@ -74,7 +73,7 @@ fin = join2.loc[:,'coord_popular_place'].tolist()
 
 distancia_km = []
 tiempo_caminando = []
-gmaps = googlemaps.Client(key='AIzaSyAdZKjevohQs7fHJn3NpZJ70DDtcAsj4rI')
+gmaps = googlemaps.Client(key='')
 
 for x,y in zip(inicio,fin):
     origins = x
