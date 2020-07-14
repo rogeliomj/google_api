@@ -9,7 +9,7 @@ fin = join2.loc[:,'coord_popular_place'].tolist()
 distancia_km = []
 tiempo_caminando = []
 
-gmaps = googlemaps.Client(key='AIzaSyAdZKjevohQs7fHJn3NpZJ70DDtcAsj4rI')
+gmaps = googlemaps.Client(key='')
 
 for x,y in zip(inicio,fin):
     origins = x
